@@ -1,0 +1,105 @@
+h1, h2, h3, h4, p {
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h3.leaders {
+    color: #ffffff;
+}
+
+p.leaders {
+    color: #ffffff;
+}
+
+.container-fluid {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-6 {
+    padding: 100px 50px;
+}
+
+.col-md-6.top {
+    background-color: #1C1C1C;
+}
+
+.col-md-6.content.top {
+    background-color: #cccccc;
+}
+
+.row.stats {
+    background-color: #cccccc;
+}
+
+.row.playing {
+    background-color: #f2f2f2;
+}
+
+.table.table-dark {
+    background-color: #454545;
+    max-width: 700px;
+}
+
+button {
+    background-color: darkgray;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+button.submit-btn {
+    background-color: #00A4DD;
+}
+
+button.submit-btn:hover {
+    background-color: #454545;
+}
+
+
+button.add-player {
+    background-color: #00E2B8;
+}
+
+input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+}
+
+.stats {
+    background-color: #cccccc;
+}
+
+
+.btn-play {
+    background-color: #cccccc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: #454545;
+}
+
+
+
+@media (max-width: 768px) { 
+    
+    .col-md-6.content-bottom-r {
+        background-color: #cccccc;
+    }
+}
+
+
+
+

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Super Pool</title>
+        
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+
+        <div class="container-fluid">
+            <div class="row stats">
+                <div class="col-md-6 content top">
+                <div class="text-one">
+                  <h1 class="headline">We Like to Play Pool.</h1>
+                  <h2 class="subhead">(And we like to think we're pretty good at it, too.)</h2>
+                  <p>Check out some of our best players or add a player to our stats calculator</p>
+                </div>
+                <div class="addnew">
+                        <form id="new-player">
+                            <input type="text" name="name" placeholder="player name">                            
+                            <button class="add-player">Add Player!</button>
+                        </form>
+                    </div>  
+            </div>   
+            <div class="col-md-6 top">
+                    <div id="stats-table">
+                        <h3 class="leaders">Leaderboard</h3>
+                        <p class="leaders">These folks are *the* best</p>
+                        <table class="table table-dark">
+                            <thead>
+                            <tr>
+                            <th scope="col">player</th>
+                            <th scope="col">wins</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td><span id="firstplace"></span></td>
+                            <td><span id="firstplace-score"></span></td>
+                            </tr>
+                            <td><span id="secondplace"></span></td>
+                            <td><span id="secondplace-score"></span></td>
+                            </tr>
+                            <td><span id="thirdplace"></span></td>
+                            <td><span id="thirdplace-score"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row playing">
+                    <div class="col-md-6">
+                        <div>
+                            <p id="player-area"></p>
+                        </div>
+                    <div class="addgame">
+                            <div class="text-one">
+                                <h2 class="headline">Wanna enter scores from your own game?</h2>
+                                <p>Select the players and we'll add them to our stats.<p>
+                            </div>
+                                <div class="player-select">
+                                <div id="game-play">
+                                       
+                                        <h2>PLAYER 1</h2>
+                                        <form>
+                                        <div class="form-group" id="radio-fields">
+                                        <div class="form-check form-check-inline my-3">
+                                            <label class="form-check-label" for="inlineRadio1"><span id="playplay1" class="btn-play"></span></label>
+                                            <input class="form-check-input btn-play" type="radio" name="inlineRadioOptions" id="formtrue" value="true1">
+                                        </div> 
+                                        <h2 class="my-1">PLAYER 2</h2>
+                                        <div class="form-check form-check-inline my-3">
+                                            <label class="form-check-label" for="inlineRadio1"><span id="playplay2" class="btn-play"></span></label>
+                                            <input class="form-check-input btn-play" type="radio" name="inlineRadioOptions" id="formtrue" value="true2">
+                                        </div> 
+                                            </div>
+                                            <button type="submit" class="submit-btn" id="radioform">Add your Stats!</button>
+                                        </form>
+                                </div>
+                                <div id="games">
+                                    <div id="game1"></div>
+                                    <div id="game2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 content-bottom-r">
+                        <h1>All Players</h1>
+                        <ul id="allplayers"></ul>
+                    </div>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyALFxryLBM-hTOfgVsg9CandwkSxHDlgYg",
+        authDomain: "pool-app-ais.firebaseapp.com",
+        databaseURL: "https://pool-app-ais.firebaseio.com",
+        projectId: "pool-app-ais",
+        storageBucket: "pool-app-ais.appspot.com",
+        messagingSenderId: "922671430693"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    <script src="pool.js"></script>
+
+
+</body>
+</html>
